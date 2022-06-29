@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -15,12 +14,11 @@ public class Library {
 
     public static void addBook(){
         while (true){
-            System.out.println("If you would like to add a book to your cart; type add. If not, type the title of the book to lookup the book. Type DONE is you are finished!");
+            System.out.println("If you would like to add a book to your cart; type add. If not, type the title of the book to lookup the book. Type done is you are finished!");
             userInput = scanner.next();
-            System.out.println(userInput);
-            if (!(userInput.equals("add"))){
+            if (!(userInput.equals("add")) && !(userInput.equals("done"))){
                 lookUp(userInput);
-            } else if (userInput.equals("DONE")){
+            } else if (userInput.equals("done")){
                 break;
             }
             else {
